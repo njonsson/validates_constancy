@@ -1,0 +1,19 @@
+Here are instructions for running integration tests for the Validates Constancy
+plugin.
+
+Set up your development environment:
+
+* Download and install Ruby from http://www.ruby-lang.org/
+* Install the sqlite3-ruby gem: type ‘gem install sqlite3-ruby’ and choose the
+  gem appropriate to your operating system
+* Install sqlite3
+  - If you’re on Windows, copy ‘sqlite3.def’ and ‘sqlite3.dll’ from the
+    ‘integration_test_rails_project\doc\prereq\mswin32’ directory to the ‘bin’
+    subdirectory of your Ruby installation
+  - For other operating systems, download and install the appropriate binary
+    from http://www.sqlite.org/download
+
+Run the tests:
+
+* Run ‘rake’ from the ‘integration_test_rails_project’ directory (you may need
+  to ‘gem install rake’ first)
