@@ -4,16 +4,18 @@ plugin.
 Set up your development environment:
 
 * Download and install Ruby from http://www.ruby-lang.org/
-* Install the sqlite3-ruby gem: type ‘gem install sqlite3-ruby’ and choose the
+* Download and install MySQL from http://www.mysql.com/
+* Install the MySQL gem: type ‘gem install mysql’ and choose the
   gem appropriate to your operating system
-* Install sqlite3
-  - If you’re on Windows, copy ‘sqlite3.def’ and ‘sqlite3.dll’ from the
-    ‘integration_test_rails_project\doc\prereq\mswin32’ directory to the ‘bin’
-    subdirectory of your Ruby installation
-  - For other operating systems, download and install the appropriate binary
-    from http://www.sqlite.org/download
+* Create two new MySQL databases named ‘validatesconstancy_development’ and
+  ‘validatesconstancy_test’. To do this:
+  - Type ‘mysql -u root -p’ and then type the root password when prompted
+  - Type ‘create database validatesconstancy_development;’
+  - Type ‘create database validatesconstancy_test;’
+  - Type ‘exit’ to quit MySQL
+* Type ‘rake db:migrate’ from the ‘rails_1-2-3’ directory (the root of this
+  Rails application). You may need to ‘gem install rake’ first
 
 Run the tests:
 
-* Run ‘rake’ from the ‘integration_test_rails_project’ directory (you may need
-  to ‘gem install rake’ first)
+* Type ‘rake’ from the ‘rails_1-2-3’ directory
