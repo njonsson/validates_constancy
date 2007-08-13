@@ -1,4 +1,4 @@
-== ValidatesConstancy for Active Record
+== Validates Constancy plugin for Active Record
 
 http://constancy.rubyforge.org
 
@@ -12,16 +12,16 @@ attribute of a model object is different from its value in the database.
 
 === Installing Validates Constancy
 
-Various versions of the Rails framework are supported. Each supported version of
-Rails has a branch dedicated to it in the Validates Constancy repository. If you
-are using Rails v1.2.3, you can install the compatible version of the plugin
-with the command:
+The Validates Constancy plugin is compatible with the latest released version of
+the Rails framework (and possibly also other versions -- see
+http://constancy.rubyforge.org/svn/plugin/test). You can install the plugin with
+the command:
 
-  ruby script/plugin install svn://rubyforge.org/var/svn/constancy/branches/rails_1-2-3/validates_constancy
+  ruby script/plugin install http://constancy.rubyforge.org/svn/plugin/validates_constancy
 
-If you are on edge Rails, install Validates Constancy from trunk:
-
-  ruby script/plugin install svn://rubyforge.org/var/svn/constancy/trunk/validates_constancy
+Have a look at the Validates Constancy gem
+(http://constancy.rubyforge.org/svn/gem) if you are using a version of Rails
+that is not supported by the plugin.
 
 
 === Using constancy validation
@@ -75,15 +75,13 @@ variable itself: <tt>validates_constancy_of :invoice_id</tt> instead of
 === Running automated tests for Validates Constancy
 
 There’s a suite of tests that exercises all the functionality of the Validates
-Constancy plugin. You can check out versions of the test suite from the
+Constancy plugin. You can check out a version of the test suite from the
 repository according to the version of Rails it works with. For Rails v1.2.3,
-check out
-svn://rubyforge.org/var/svn/constancy/branches/rails_1-2-3/integration_test_rails_project.
+check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-3.
 For edge Rails, check out
-svn://rubyforge.org/var/svn/constancy/trunk/integration_test_rails_project.
+http://constancy.rubyforge.org/svn/plugin/test/rails_edge.
 
-Then read integration_test_rails_project/doc/README_FOR_APP to learn how to run
-the tests.
+Then read rails_*/doc/README_FOR_APP to learn how to run the tests.
 
 
 === Credits
