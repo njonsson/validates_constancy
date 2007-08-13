@@ -20,7 +20,7 @@ the command:
   ruby script/plugin install http://constancy.rubyforge.org/svn/plugin/validates_constancy
 
 Have a look at the Validates Constancy gem
-(http://constancy.rubyforge.org/svn/gem) if you are using a version of Rails
+(http://constancy.rubyforge.org/svn/gem) if you’re using a version of Rails
 that is not supported by the plugin.
 
 
