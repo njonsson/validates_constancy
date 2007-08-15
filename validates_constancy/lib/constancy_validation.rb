@@ -6,7 +6,7 @@ module ConstancyValidation
   ActiveRecord::Errors.default_error_messages[:constancy] = "can't be changed"
   
   # The following validation is defined in the class scope of the model that
-  # you're interested in validating. It offers a declarative way of specifying
+  # you’re interested in validating. It offers a declarative way of specifying
   # when the model is valid and when it is not.
   module ClassMethods
     
@@ -30,6 +30,15 @@ module ConstancyValidation
     # Warning: With associations, validate the constancy of a foreign key, not
     # the instance variable itself: <tt>validates_constancy_of :invoice_id</tt>
     # instead of <tt>validates_constancy_of :invoice</tt>.
+    # 
+    # Also note the warning under <em>Inheritable callback queues</em> in
+    # http://api.rubyonrails.org/classes/ActiveRecord/Callbacks.html. “In order
+    # for inheritance to work for the callback queues, you must specify the
+    # callbacks before specifying the associations. Otherwise, you might trigger
+    # the loading of a child before the parent has registered the callbacks and
+    # they won’t be inherited.” Validates Constancy uses these callback queues,
+    # so you’ll want to specify associations *after* +validates_constancy_of+
+    # statements in your model classes.
     def validates_constancy_of(*attribute_names)
       options = {:message =>
                  ActiveRecord::Errors.default_error_messages[:constancy]}
