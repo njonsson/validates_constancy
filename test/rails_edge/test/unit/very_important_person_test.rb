@@ -102,6 +102,14 @@ module VeryImportantPersonTest
       assert_valid @person
     end
     
+    def test_should_have_user_defined_after_find_method
+      assert_equal false,
+                   @person.instance_variable_defined?(:@after_find_counter)
+      @person.save!
+      @person = Person.find(@person.id)
+      assert_equal 1, @person.instance_variable_get(:@after_find_counter)
+    end
+    
   end
   
   
@@ -121,6 +129,43 @@ module VeryImportantPersonTest
   end
   
   
+  class NewWithChangedBirthdateTest < Test::Unit::TestCase
+    
+    fixtures :people
+    
+    def setup
+      @person = VeryImportantPerson.new(:birthdate => '1971-10-25')
+      @person.birthdate = '1971-07-12'
+    end
+    
+    def test_should_be_valid
+      assert_valid @person
+    end
+    
+  end
+  
+  
+  class NewSavedWithBirthdateTest < Test::Unit::TestCase
+    
+    fixtures :people
+    
+    def setup
+      @person = VeryImportantPerson.new(:birthdate => '1971-10-25')
+      @person.save!
+    end
+    
+    def test_should_be_valid
+      assert_valid @person
+    end
+    
+    def test_should_be_valid_when_birthdate_is_changed
+      @person.birthdate = '1971-07-12'
+      assert_valid @person
+    end
+    
+  end
+  
+  
   class NewWithChangedBecameImportantOnTest < Test::Unit::TestCase
     
     fixtures :people
@@ -132,6 +177,29 @@ module VeryImportantPersonTest
     
     def test_should_be_valid
       assert_valid @person
+    end
+    
+  end
+  
+  
+  class NewSavedWithBecameImportantOnTest < Test::Unit::TestCase
+    
+    fixtures :people
+    
+    def setup
+      @person = VeryImportantPerson.new(:became_important_on => '1982-12-31')
+      @person.save!
+    end
+    
+    def test_should_be_valid
+      assert_valid @person
+    end
+    
+    def test_should_have_error_on_became_important_on_when_changed
+      @person.became_important_on = Time.now
+      @person.valid?
+      assert_equal ['Became important on is set in stone'],
+                   @person.errors.full_messages
     end
     
   end

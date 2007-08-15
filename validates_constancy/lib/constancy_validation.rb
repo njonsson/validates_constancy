@@ -57,12 +57,13 @@ module ConstancyValidation
     class << self
       
       def extend(klass)
-        unless create_method_after_find_with_original_attributes_capture(klass)
-          return false
-        end
+        return false if klass.method_defined?(:capture_original_attributes)
+        
+        create_method_capture_original_attributes klass
         
         create_method_after_find_unless_exists klass
-        klass.alias_method_chain :after_find, :original_attributes_capture
+        klass.after_find :capture_original_attributes
+        klass.after_save :capture_original_attributes
         
         true
       end
@@ -70,37 +71,30 @@ module ConstancyValidation
     private
       
       def create_method(klass, method_name, &block)
-        klass.send :define_method, method_name, &block
+        klass.class_eval { define_method method_name, &block }
       end
       
       def create_method_after_find_unless_exists(klass)
         # ActiveRecord does not define Base#after_find — it gets called
         # dynamically if present. So we need to define a do-nothing method to
         # serve as the head of the method chain.
-        unless klass.method_defined?(:after_find)
-          create_method(klass, :after_find) { self }
-        end
+        return false if klass.method_defined?(:after_find)
+        
+        create_method(klass, :after_find) { self }
+        
+        true
       end
       
-      def create_method_after_find_with_original_attributes_capture(klass)
-        if klass.method_defined?(:after_find_with_original_attributes_capture)
-          return false
-        end
-        
-        create_method(klass, :after_find_with_original_attributes_capture) do
-          after_find_without_original_attributes_capture
-          
+      def create_method_capture_original_attributes(klass)
+        create_method(klass, :capture_original_attributes) do
           constant_names = self.class.instance_variable_get(:@constant_attribute_names)
           originals = constant_names.inject({}) do |result, attribute_name|
             result[attribute_name] = read_attribute(attribute_name)
             result
           end
           instance_variable_set :@original_attributes, originals
-          
           self
         end
-        
-        true
       end
       
     end

@@ -16,4 +16,10 @@ class Person < ActiveRecord::Base
   
   validates_constancy_of :social_security_number, :first_speeding_ticket_at
   
+  def after_find
+    @after_find_counter ||= 0
+    @after_find_counter += 1
+    self
+  end
+  
 end
