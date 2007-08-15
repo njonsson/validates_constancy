@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 module LicensePlateTest
   
-  class MrBigUnprotectedTest < Test::Unit::TestCase
+  class MrBigUnprotected < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -18,7 +18,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedTest < Test::Unit::TestCase
+  class MrBigProtected < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -34,7 +34,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigUnprotectedWithChangeToExtraTest < Test::Unit::TestCase
+  class MrBigUnprotectedWithChangeToExtra < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -50,7 +50,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedWithChangeToExtraTest < Test::Unit::TestCase
+  class MrBigProtectedWithChangeToExtra < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -67,7 +67,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigUnprotectedWithChangeToStateTest < Test::Unit::TestCase
+  class MrBigUnprotectedWithChangeToState < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -83,7 +83,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedWithChangeToStateTest < Test::Unit::TestCase
+  class MrBigProtectedWithChangeToState < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -102,7 +102,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigUnprotectedWithChangeToNumberTest < Test::Unit::TestCase
+  class MrBigUnprotectedWithChangeToNumber < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -118,7 +118,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedWithChangeToNumberTest < Test::Unit::TestCase
+  class MrBigProtectedWithChangeToNumber < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -137,7 +137,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigUnprotectedWithChangesToNumberAndIssuedOnTest < Test::Unit::TestCase
+  class MrBigUnprotectedWithChangesToNumberAndIssuedOn < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -154,7 +154,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedWithChangesToNumberAndIssuedOnTest < Test::Unit::TestCase
+  class MrBigProtectedWithChangesToNumberAndIssuedOn < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -175,7 +175,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigUnprotectedWithChangeToColorTest < Test::Unit::TestCase
+  class MrBigUnprotectedWithChangeToColor < Test::Unit::TestCase
     
     fixtures :license_plates
     
@@ -192,7 +192,7 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedWithChangeToColorTest < Test::Unit::TestCase
+  class MrBigProtectedWithChangeToColor < Test::Unit::TestCase
     
     fixtures :license_plates
     

@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 module PersonTest
   
-  class JohnDoeTest < Test::Unit::TestCase
+  class JohnDoe < Test::Unit::TestCase
     
     fixtures :people
     
@@ -18,7 +18,7 @@ module PersonTest
   end
   
   
-  class JohnDoeWithChangedNameTest < Test::Unit::TestCase
+  class JohnDoeWithChangedName < Test::Unit::TestCase
     
     fixtures :people
     
@@ -34,7 +34,7 @@ module PersonTest
   end
   
   
-  class JohnDoeWithChangedSocialSecurityNumberTest < Test::Unit::TestCase
+  class JohnDoeWithChangedSocialSecurityNumber < Test::Unit::TestCase
     
     fixtures :people
     
@@ -52,7 +52,7 @@ module PersonTest
   end
   
   
-  class JohnDoeWithChangedFirstSpeedTicketAtTest < Test::Unit::TestCase
+  class JohnDoeWithChangedFirstSpeedTicketAt < Test::Unit::TestCase
     
     fixtures :people
     
@@ -70,7 +70,7 @@ module PersonTest
   end
   
   
-  class JohnDoeWithStringifiedFirstSpeedingTicketAtTest < Test::Unit::TestCase
+  class JohnDoeWithStringifiedFirstSpeedingTicketAt < Test::Unit::TestCase
     
     fixtures :people
     
@@ -86,7 +86,7 @@ module PersonTest
   end
   
   
-  class NewTest < Test::Unit::TestCase
+  class New < Test::Unit::TestCase
     
     fixtures :people
     
@@ -109,7 +109,7 @@ module PersonTest
   end
   
   
-  class NewWithChangedNameTest < Test::Unit::TestCase
+  class NewWithChangedName < Test::Unit::TestCase
     
     fixtures :people
     
@@ -125,7 +125,7 @@ module PersonTest
   end
   
   
-  class NewSavedWithNameTest < Test::Unit::TestCase
+  class NewSavedWithName < Test::Unit::TestCase
     
     fixtures :people
     
@@ -146,7 +146,7 @@ module PersonTest
   end
   
   
-  class NewWithChangedSocialSecurityNumberTest < Test::Unit::TestCase
+  class NewWithChangedSocialSecurityNumber < Test::Unit::TestCase
     
     fixtures :people
     
@@ -162,7 +162,7 @@ module PersonTest
   end
   
   
-  class NewSavedWithSocialSecurityNumberTest < Test::Unit::TestCase
+  class NewSavedWithSocialSecurityNumber < Test::Unit::TestCase
     
     fixtures :people
     

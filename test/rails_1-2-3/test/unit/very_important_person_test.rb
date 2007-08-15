@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 module VeryImportantPersonTest
   
-  class MidoriTest < Test::Unit::TestCase
+  class Midori < Test::Unit::TestCase
     
     fixtures :people
     
@@ -18,7 +18,7 @@ module VeryImportantPersonTest
   end
   
   
-  class MidoriWithChangedNameTest < Test::Unit::TestCase
+  class MidoriWithChangedName < Test::Unit::TestCase
     
     fixtures :people
     
@@ -36,7 +36,7 @@ module VeryImportantPersonTest
   end
   
   
-  class MidoriWithChangedBecameImportantOnTest < Test::Unit::TestCase
+  class MidoriWithChangedBecameImportantOn < Test::Unit::TestCase
     
     fixtures :people
     
@@ -54,7 +54,7 @@ module VeryImportantPersonTest
   end
   
   
-  class MidoriWithStringifiedBecameImportantOnTest < Test::Unit::TestCase
+  class MidoriWithStringifiedBecameImportantOn < Test::Unit::TestCase
     
     fixtures :people
     
@@ -70,7 +70,7 @@ module VeryImportantPersonTest
   end
   
   
-  class MidoriWithChangedNameAndBecameImportantOnTest < Test::Unit::TestCase
+  class MidoriWithChangedNameAndBecameImportantOn < Test::Unit::TestCase
     
     fixtures :people
     
@@ -90,7 +90,7 @@ module VeryImportantPersonTest
   end
   
   
-  class NewTest < Test::Unit::TestCase
+  class New < Test::Unit::TestCase
     
     fixtures :people
     
@@ -113,7 +113,7 @@ module VeryImportantPersonTest
   end
   
   
-  class NewWithChangedNameTest < Test::Unit::TestCase
+  class NewWithChangedName < Test::Unit::TestCase
     
     fixtures :people
     
@@ -129,7 +129,7 @@ module VeryImportantPersonTest
   end
   
   
-  class NewWithChangedBirthdateTest < Test::Unit::TestCase
+  class NewWithChangedBirthdate < Test::Unit::TestCase
     
     fixtures :people
     
@@ -145,7 +145,7 @@ module VeryImportantPersonTest
   end
   
   
-  class NewSavedWithBirthdateTest < Test::Unit::TestCase
+  class NewSavedWithBirthdate < Test::Unit::TestCase
     
     fixtures :people
     
@@ -166,7 +166,7 @@ module VeryImportantPersonTest
   end
   
   
-  class NewWithChangedBecameImportantOnTest < Test::Unit::TestCase
+  class NewWithChangedBecameImportantOn < Test::Unit::TestCase
     
     fixtures :people
     
@@ -182,7 +182,7 @@ module VeryImportantPersonTest
   end
   
   
-  class NewSavedWithBecameImportantOnTest < Test::Unit::TestCase
+  class NewSavedWithBecameImportantOn < Test::Unit::TestCase
     
     fixtures :people
     
@@ -205,7 +205,7 @@ module VeryImportantPersonTest
   end
   
   
-  class NewWithChangedNameAndBecameImportantOnTest < Test::Unit::TestCase
+  class NewWithChangedNameAndBecameImportantOn < Test::Unit::TestCase
     
     fixtures :people
     
