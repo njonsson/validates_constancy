@@ -1,3 +1,5 @@
+require 'active_record'
+
 # When this module is included in ActiveRecord::Base, the validation method in
 # ConstancyValidation::ClassMethods becomes available to all Active Record
 # models.
