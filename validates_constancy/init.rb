@@ -1,1 +1,1 @@
-require "#{File.dirname __FILE__}/lib/validates_constancy"
+require File.join(File.dirname(__FILE__), 'lib', 'validates_constancy')

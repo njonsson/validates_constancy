@@ -1,4 +1,6 @@
-Dir.glob("#{File.dirname __FILE__}/validates_constancy/**/*.rb") do |filename|
+Dir.glob(File.join(File.dirname(__FILE__),
+         'validates_constancy',
+         '*.rb') do |filename|
   require filename
 end
 
