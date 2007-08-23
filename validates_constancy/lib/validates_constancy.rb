@@ -1,6 +1,6 @@
 Dir.glob(File.join(File.dirname(__FILE__),
          'validates_constancy',
-         '*.rb') do |filename|
+         '*.rb')) do |filename|
   require filename
 end
 
