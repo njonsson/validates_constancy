@@ -5,17 +5,17 @@ Set up your development environment:
 
 * Download and install Ruby from http://www.ruby-lang.org/
 * Download and install MySQL from http://www.mysql.com/
-* Install the MySQL gem: type ‘gem install mysql’ and choose the
+* Install the MySQL gem: type 'gem install mysql' and choose the
   gem appropriate to your operating system
-* Create two new MySQL databases named ‘validatesconstancy_development’ and
-  ‘validatesconstancy_test’. To do this:
-  - Type ‘mysql -u root -p’ and then type the root password when prompted
-  - Type ‘create database validatesconstancy_development;’
-  - Type ‘create database validatesconstancy_test;’
-  - Type ‘exit’ to quit MySQL
-* Type ‘rake db:migrate’ from the ‘rails_1-2-2’ directory (the root of this
-  Rails application). You may need to ‘gem install rake’ first
+* Create two new MySQL databases named 'validatesconstancy_development' and
+  'validatesconstancy_test'. To do this:
+  - Type 'mysql -u root -p' and then type the root password when prompted
+  - Type 'create database validatesconstancy_development;'
+  - Type 'create database validatesconstancy_test;'
+  - Type 'exit' to quit MySQL
+* Type 'rake db:migrate' from the 'rails_1-2-2' directory (the root of this
+  Rails application). You may need to 'gem install rake' first
 
 Run the tests:
 
-* Type ‘rake’ from the ‘rails_1-2-2’ directory
+* Type 'rake' from the 'rails_1-2-2' directory

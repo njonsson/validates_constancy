@@ -20,13 +20,13 @@ the command:
   ruby script/plugin install http://constancy.rubyforge.org/svn/plugin/validates_constancy
 
 Have a look at the Validates Constancy gem
-(http://constancy.rubyforge.org/svn/gem) if you’re using a version of Rails
+(http://constancy.rubyforge.org/svn/gem) if you're using a version of Rails
 that is not supported by the plugin.
 
 
 === Using constancy validation
 
-Here’s how to use this validation in your code.
+Here's how to use this validation in your code.
 
   class Person < ActiveRecord::Base
     
@@ -39,18 +39,18 @@ Here’s how to use this validation in your code.
 ==== Options
 
 The validation takes two options, <tt>:if</tt> and <tt>:message</tt>. These may
-be familiar because several of ActiveRecord’s validations also use them. The
+be familiar because several of Active Record's validations also use them. The
 <tt>:if</tt> option takes a Proc, or a symbol, or string with a model object
 argument and a return value of +true+ or +false+.
 
   class Comment < ActiveRecord::Base
     
-    # Prevent changes to Comment#text if it is “locked.”
+    # Prevent changes to Comment#text if it is "locked."
     validates_constancy_of :text, :if => Proc.new { |comment| comment.locked? }
     
   end
 
-The default error message is “can’t be changed”. Use your own error message by
+The default error message is "can't be changed". Use your own error message by
 specifying the <tt>:message</tt> option.
 
   class LicensePlate < ActiveRecord::Base
@@ -72,18 +72,18 @@ variable itself: <tt>validates_constancy_of :invoice_id</tt> instead of
 <tt>validates_constancy_of :invoice</tt>.
 
 Also note the warning under <em>Inheritable callback queues</em> in
-http://api.rubyonrails.org/classes/ActiveRecord/Callbacks.html. “In order for
+http://api.rubyonrails.org/classes/ActiveRecord/Callbacks.html. "In order for
 inheritance to work for the callback queues, you must specify the callbacks
 before specifying the associations. Otherwise, you might trigger the loading of
-a child before the parent has registered the callbacks and they won’t be
-inherited.” Validates Constancy uses these callback queues, so you’ll want to
+a child before the parent has registered the callbacks and they won't be
+inherited." Validates Constancy uses these callback queues, so you'll want to
 specify associations *after* +validates_constancy_of+ statements in your model
 classes.
 
 
 === Running automated tests for Validates Constancy
 
-There’s a suite of tests that exercises all the functionality of the Validates
+There's a suite of tests that exercises all the functionality of the Validates
 Constancy plugin. You can check out a version of the test suite from the
 repository according to the version of Rails it works with. For Rails v1.2.3,
 check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-3.
