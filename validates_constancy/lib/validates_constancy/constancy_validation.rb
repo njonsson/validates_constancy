@@ -86,7 +86,7 @@ module ConstancyValidation
       end
       
       def create_method_after_find_unless_exists(klass)
-        # ActiveRecord does not define Base#after_find — it gets called
+        # Active Record does not define Base#after_find — it gets called
         # dynamically if present. So we need to define a do-nothing method to
         # serve as the head of the method chain.
         return false if klass.method_defined?(:after_find)
