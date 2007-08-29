@@ -13,9 +13,9 @@ Set up your development environment:
   - Type ‘create database validatesconstancy_development;’
   - Type ‘create database validatesconstancy_test;’
   - Type ‘exit’ to quit MySQL
-* Type ‘rake db:migrate’ from the ‘rails_1-2-3’ directory (the root of this
-  Rails application). You may need to ‘gem install rake’ first
+* Type ‘rake db:migrate’ from the ‘rails_edge’ directory (the root of this Rails
+  application). You may need to ‘gem install rake’ first
 
 Run the tests:
 
-* Type ‘rake’ from the ‘rails_1-2-3’ directory
+* Type ‘rake’ from the ‘rails_edge’ directory
