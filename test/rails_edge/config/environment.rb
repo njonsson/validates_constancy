@@ -22,8 +22,8 @@ Rails::Initializer.run do |config|
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
-  # Add all libraries in vendor directory (but neither Rails nor plugins——those
-  # get loaded automatically).
+  # Add all libraries in vendor directory (but neither Rails nor plugins --
+  # those get loaded automatically).
   Dir.glob(File.join('vendor', '**', 'lib')) do |path|
     config.load_paths << path unless (path =~ /\b(plugins|rails)\b/)
   end
