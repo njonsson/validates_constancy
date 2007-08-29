@@ -18,15 +18,15 @@ attribute of a model object is different from its value in the database.
 The code is packaged as both a RubyGem and a Rails plugin. You can use either
 one, depending on what your needs are.
 
-The Validates Constancy gem is compatible with various versions of Rails (Active
-Record) -- see the _test_ subdirectories of
+<b>The Validates Constancy gem</b> is compatible with various versions of Rails
+(Active Record) -- see the _test_ subdirectories of
 http://constancy.rubyforge.org/svn/gem/branches. You can install the gem with
 the command:
 
   gem install validates_constancy
 
-The Validates Constancy plugin is compatible with the latest released version of
-the Rails framework (and possibly also other versions -- see
+<b>The Validates Constancy plugin</b> is compatible with the latest released
+version of the Rails framework (and possibly also other versions -- see
 http://constancy.rubyforge.org/svn/plugin/test). You can install the plugin with
 the command:
 
@@ -100,6 +100,14 @@ classes.
 There's a suite of tests that exercises all the functionality of Validates
 Constancy. You can check out a version of the test suite from the repository
 according to the version of Rails (Active Record) it works with.
+
+==== Gem
+
+[<b>Rails v1.2.2 (Active Record v1.15.2)</b>] Check out http://constancy.rubyforge.org/svn/gem/tags/rel_1-0-0/test/rails_1-2-2
+[<b>Rails v1.2.3 (Active Record v1.15.3)</b>] Check out http://constancy.rubyforge.org/svn/gem/tags/rel_1-0-0/test/rails_1-2-3
+[<b>Edge Rails</b>]                           Check out http://constancy.rubyforge.org/svn/gem/tags/rel_1-0-0/test/rails_edge
+
+==== Plugin
 
 [<b>Rails v1.2.2 (Active Record v1.15.2)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-2
 [<b>Rails v1.2.3 (Active Record v1.15.3)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-3
