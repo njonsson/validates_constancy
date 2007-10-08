@@ -21,8 +21,17 @@ john_doe:
   birthdate:                1977-07-07
   first_speeding_ticket_at: 1999-09-09
 
+# Debuted with Zubin Mehta and the New York Philharmonic on December 31, 1982
 midori:
-  id:                     2
-  type:                   VeryImportantPerson
-  name:                   Midori (Goto)
-  became_important_on:    1982-12-31 # Debut with Zubin Mehta & NY Philharmonic
+  id:                  2
+  type:                VeryImportantPerson
+  name:                Midori (Goto)
+  became_important_on: 1982-12-31
+
+joe_schmoe:
+  id:                       3
+  type:                     Schmoe
+  name:                     Joe Schmoe
+  social_security_number:   987-65-4321
+  birthdate:                1988-08-08
+  first_speeding_ticket_at: 2005-05-05

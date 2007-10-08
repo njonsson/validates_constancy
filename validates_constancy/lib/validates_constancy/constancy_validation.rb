@@ -48,7 +48,11 @@ module ConstancyValidation
                  ActiveRecord::Errors.default_error_messages[:constancy]}
       options.merge!(attribute_names.pop) if attribute_names.last.kind_of?(Hash)
       
-      (@constant_attribute_names ||= []).concat attribute_names.collect!(&:to_s)
+      constant_names = base_class.instance_variable_get(:@constant_attribute_names) ||
+                       []
+      constant_names.concat attribute_names.collect!(&:to_s)
+      base_class.instance_variable_set :@constant_attribute_names,
+                                       constant_names
       
       ConstancyValidation::OriginalAttributesCapture.extend self
       
@@ -100,7 +104,8 @@ module ConstancyValidation
       
       def create_method_capture_original_attributes(klass)
         create_method(klass, :capture_original_attributes) do
-          constant_names = self.class.instance_variable_get(:@constant_attribute_names)
+          constant_names = self.class.base_class.instance_variable_get(:@constant_attribute_names) ||
+                           []
           originals = constant_names.inject({}) do |result, attribute_name|
             result[attribute_name] = read_attribute(attribute_name)
             result
