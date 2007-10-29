@@ -12,10 +12,7 @@ module SchmoeTest
     end
     
     def test_should_be_valid
-      $yeah_show_me = true
       assert_valid @person
-    ensure
-      $yeah_show_me = false
     end
     
   end
