@@ -1,5 +1,9 @@
 *SVN*
 
+*1.0.1*
+
+* Fix bug #14521 addressing subclasses of a constancy-validated model that do
+  not themselves have constancy validations
 
 *1.0*
 
