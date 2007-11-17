@@ -1,0 +1,37 @@
+# == Schema Information
+# Schema version: 2
+#
+# Table name: people
+#
+#  id                       :integer(11)   not null, primary key
+#  type                     :string(255)   
+#  name                     :string(255)   
+#  social_security_number   :string(255)   
+#  birthdate                :date          
+#  became_important_on      :date          
+#  first_speeding_ticket_at :datetime      
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+john_doe:
+  id:                       1
+  type:                     Person
+  name:                     John Doe
+  social_security_number:   123-45-6789
+  birthdate:                1977-07-07
+  first_speeding_ticket_at: 1999-09-09
+
+# Debuted with Zubin Mehta and the New York Philharmonic on December 31, 1982
+midori:
+  id:                  2
+  type:                VeryImportantPerson
+  name:                Midori (Goto)
+  became_important_on: 1982-12-31
+
+joe_schmoe:
+  id:                       3
+  type:                     Schmoe
+  name:                     Joe Schmoe
+  social_security_number:   987-65-4321
+  birthdate:                1988-08-08
+  first_speeding_ticket_at: 2005-05-05
