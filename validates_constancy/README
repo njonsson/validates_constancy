@@ -2,7 +2,8 @@
 
 http://constancy.rubyforge.org
 
-Compatible with Rails v1.2.2 and v1.2.3 (Active Record v1.15.2 and v1.15.3)
+Compatible with Rails v1.2.2 through v1.2.6 (Active Record v1.15.2 through
+v1.15.6)
 
 
 === Introduction
@@ -103,14 +104,20 @@ according to the version of Rails (Active Record) it works with.
 
 ==== Gem
 
-[<b>Rails v1.2.2 (Active Record v1.15.2)</b>] Check out http://constancy.rubyforge.org/svn/gem/tags/rel_1-0-0/test/rails_1-2-2
-[<b>Rails v1.2.3 (Active Record v1.15.3)</b>] Check out http://constancy.rubyforge.org/svn/gem/tags/rel_1-0-0/test/rails_1-2-3
-[<b>Edge Rails</b>]                           Check out http://constancy.rubyforge.org/svn/gem/tags/rel_1-0-0/test/rails_edge
+[<b>Rails v1.2.2 (Active Record v1.15.2)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-2
+[<b>Rails v1.2.3 (Active Record v1.15.3)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-3
+[<b>Rails v1.2.4 (Active Record v1.15.4)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-4
+[<b>Rails v1.2.5 (Active Record v1.15.5)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-5
+[<b>Rails v1.2.6 (Active Record v1.15.6)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-6
+[<b>Edge Rails</b>]                           Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_edge
 
 ==== Plugin
 
 [<b>Rails v1.2.2 (Active Record v1.15.2)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-2
 [<b>Rails v1.2.3 (Active Record v1.15.3)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-3
+[<b>Rails v1.2.4 (Active Record v1.15.4)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-4
+[<b>Rails v1.2.5 (Active Record v1.15.5)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-5
+[<b>Rails v1.2.6 (Active Record v1.15.6)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-6
 [<b>Edge Rails</b>]                           Check out http://constancy.rubyforge.org/svn/plugin/test/rails_edge
 
 Then read rails_*/doc/README_FOR_APP for instructions on how to run the tests.
