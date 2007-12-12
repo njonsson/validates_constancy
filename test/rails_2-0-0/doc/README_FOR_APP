@@ -13,7 +13,7 @@ Set up your development environment:
   - Type 'create database validatesconstancy_development;'
   - Type 'create database validatesconstancy_test;'
   - Type 'exit' to quit MySQL
-* Type 'rake db:migrate' from the 'rails_edge' directory (the root of this Rails
+* Type 'rake db:migrate' from the 'rails_2-0-0' directory (the root of this Rails
   application). You may need to 'gem install rake' first
 
 Run the tests:
