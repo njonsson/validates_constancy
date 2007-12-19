@@ -2,8 +2,8 @@
 
 http://constancy.rubyforge.org
 
-Compatible with Rails v1.2.2 through v1.2.6 (Active Record v1.15.2 through
-v1.15.6)
+Compatible with Rails v1.2.2 through v2.0.2 (Active Record v1.15.2 through
+v2.0.2)
 
 
 === Introduction
@@ -118,6 +118,9 @@ according to the version of Rails (Active Record) it works with.
 [<b>Rails v1.2.4 (Active Record v1.15.4)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-4
 [<b>Rails v1.2.5 (Active Record v1.15.5)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-5
 [<b>Rails v1.2.6 (Active Record v1.15.6)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-6
+[<b>Rails v2.0.0 (Active Record v2.0.0)</b>]  Check out http://constancy.rubyforge.org/svn/plugin/test/rails_2-0-0
+[<b>Rails v2.0.1 (Active Record v2.0.1)</b>]  Check out http://constancy.rubyforge.org/svn/plugin/test/rails_2-0-1
+[<b>Rails v2.0.2 (Active Record v2.0.2)</b>]  Check out http://constancy.rubyforge.org/svn/plugin/test/rails_2-0-2
 [<b>Edge Rails</b>]                           Check out http://constancy.rubyforge.org/svn/plugin/test/rails_edge
 
 Then read rails_*/doc/README_FOR_APP for instructions on how to run the tests.
