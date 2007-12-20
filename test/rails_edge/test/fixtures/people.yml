@@ -14,7 +14,6 @@
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 john_doe:
-  id:                       1
   type:                     Person
   name:                     John Doe
   social_security_number:   123-45-6789
@@ -23,13 +22,11 @@ john_doe:
 
 # Debuted with Zubin Mehta and the New York Philharmonic on December 31, 1982
 midori:
-  id:                  2
   type:                VeryImportantPerson
   name:                Midori (Goto)
   became_important_on: 1982-12-31
 
 joe_schmoe:
-  id:                       3
   type:                     Schmoe
   name:                     Joe Schmoe
   social_security_number:   987-65-4321

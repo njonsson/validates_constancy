@@ -3,11 +3,12 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 module SchmoeTest
   
-  class JoeSchmoe < Test::Unit::TestCase
+  class JoeSchmoe < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:joe_schmoe)
     end
     
@@ -18,11 +19,12 @@ module SchmoeTest
   end
   
   
-  class JoeSchmoeWithChangedName < Test::Unit::TestCase
+  class JoeSchmoeWithChangedName < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:joe_schmoe)
       @person.name = 'John Doe'
     end
@@ -34,11 +36,12 @@ module SchmoeTest
   end
   
   
-  class JoeSchmoeWithChangedSocialSecurityNumber < Test::Unit::TestCase
+  class JoeSchmoeWithChangedSocialSecurityNumber < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:joe_schmoe)
       @person.social_security_number = '555-55-5555'
     end
@@ -52,11 +55,12 @@ module SchmoeTest
   end
   
   
-  class JoeSchmoeWithChangedFirstSpeedTicketAt < Test::Unit::TestCase
+  class JoeSchmoeWithChangedFirstSpeedTicketAt < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:joe_schmoe)
       @person.first_speeding_ticket_at = 2.months.ago
     end
@@ -70,11 +74,12 @@ module SchmoeTest
   end
   
   
-  class JoeSchmoeWithStringifiedFirstSpeedingTicketAt < Test::Unit::TestCase
+  class JoeSchmoeWithStringifiedFirstSpeedingTicketAt < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:joe_schmoe)
       @person.first_speeding_ticket_at = '2005-05-05'
     end
@@ -86,11 +91,12 @@ module SchmoeTest
   end
   
   
-  class New < Test::Unit::TestCase
+  class New < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = Schmoe.new
     end
     
@@ -109,11 +115,12 @@ module SchmoeTest
   end
   
   
-  class NewWithChangedName < Test::Unit::TestCase
+  class NewWithChangedName < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = Schmoe.new(:name => 'Joe Schmoe')
       @person.name = 'John Doe'
     end
@@ -125,11 +132,12 @@ module SchmoeTest
   end
   
   
-  class NewSavedWithName < Test::Unit::TestCase
+  class NewSavedWithName < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = Schmoe.new(:name => 'Joe Schmoe')
       @person.save!
     end
@@ -146,11 +154,12 @@ module SchmoeTest
   end
   
   
-  class NewWithChangedSocialSecurityNumber < Test::Unit::TestCase
+  class NewWithChangedSocialSecurityNumber < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = Schmoe.new(:social_security_number => '987-65-4321')
       @person.social_security_number = '555-55-5555'
     end
@@ -162,11 +171,12 @@ module SchmoeTest
   end
   
   
-  class NewSavedWithSocialSecurityNumber < Test::Unit::TestCase
+  class NewSavedWithSocialSecurityNumber < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = Schmoe.new(:social_security_number => '987-65-4321')
       @person.save!
     end
