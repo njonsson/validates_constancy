@@ -13,5 +13,4 @@
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 mr_big:
-  id:        1
   number:    MR-BIG
