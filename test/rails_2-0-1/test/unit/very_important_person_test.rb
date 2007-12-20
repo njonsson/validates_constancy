@@ -3,11 +3,12 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 module VeryImportantPersonTest
   
-  class Midori < Test::Unit::TestCase
+  class Midori < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:midori)
     end
     
@@ -18,11 +19,12 @@ module VeryImportantPersonTest
   end
   
   
-  class MidoriWithChangedName < Test::Unit::TestCase
+  class MidoriWithChangedName < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:midori)
       @person.name = 'Midori the Great'
     end
@@ -36,11 +38,12 @@ module VeryImportantPersonTest
   end
   
   
-  class MidoriWithChangedBecameImportantOn < Test::Unit::TestCase
+  class MidoriWithChangedBecameImportantOn < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:midori)
       @person.became_important_on = Time.now
     end
@@ -54,11 +57,12 @@ module VeryImportantPersonTest
   end
   
   
-  class MidoriWithStringifiedBecameImportantOn < Test::Unit::TestCase
+  class MidoriWithStringifiedBecameImportantOn < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:midori)
       @person.became_important_on = '1982-12-31'
     end
@@ -70,11 +74,12 @@ module VeryImportantPersonTest
   end
   
   
-  class MidoriWithChangedNameAndBecameImportantOn < Test::Unit::TestCase
+  class MidoriWithChangedNameAndBecameImportantOn < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:midori)
       @person.name                = 'Midori the Great'
       @person.became_important_on = Time.now
@@ -90,11 +95,12 @@ module VeryImportantPersonTest
   end
   
   
-  class New < Test::Unit::TestCase
+  class New < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = VeryImportantPerson.new
     end
     
@@ -113,11 +119,12 @@ module VeryImportantPersonTest
   end
   
   
-  class NewWithChangedName < Test::Unit::TestCase
+  class NewWithChangedName < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = VeryImportantPerson.new(:name => 'Midori (Goto)')
       @person.name = 'Midori the Great'
     end
@@ -129,11 +136,12 @@ module VeryImportantPersonTest
   end
   
   
-  class NewWithChangedBirthdate < Test::Unit::TestCase
+  class NewWithChangedBirthdate < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = VeryImportantPerson.new(:birthdate => '1971-10-25')
       @person.birthdate = '1971-07-12'
     end
@@ -145,11 +153,12 @@ module VeryImportantPersonTest
   end
   
   
-  class NewSavedWithBirthdate < Test::Unit::TestCase
+  class NewSavedWithBirthdate < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = VeryImportantPerson.new(:birthdate => '1971-10-25')
       @person.save!
     end
@@ -166,11 +175,12 @@ module VeryImportantPersonTest
   end
   
   
-  class NewWithChangedBecameImportantOn < Test::Unit::TestCase
+  class NewWithChangedBecameImportantOn < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = VeryImportantPerson.new(:became_important_on => '1982-12-31')
       @person.became_important_on = Time.now
     end
@@ -182,11 +192,12 @@ module VeryImportantPersonTest
   end
   
   
-  class NewSavedWithBecameImportantOn < Test::Unit::TestCase
+  class NewSavedWithBecameImportantOn < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = VeryImportantPerson.new(:became_important_on => '1982-12-31')
       @person.save!
     end
@@ -205,11 +216,12 @@ module VeryImportantPersonTest
   end
   
   
-  class NewWithChangedNameAndBecameImportantOn < Test::Unit::TestCase
+  class NewWithChangedNameAndBecameImportantOn < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = VeryImportantPerson.new(:name => 'Midori (Goto)',
                                         :became_important_on => '1982-12-31')
       @person.name                = 'Midori the Great'

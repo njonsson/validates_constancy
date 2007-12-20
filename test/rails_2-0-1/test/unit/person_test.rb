@@ -3,11 +3,12 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 module PersonTest
   
-  class JohnDoe < Test::Unit::TestCase
+  class JohnDoe < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:john_doe)
     end
     
@@ -18,11 +19,12 @@ module PersonTest
   end
   
   
-  class JohnDoeWithChangedName < Test::Unit::TestCase
+  class JohnDoeWithChangedName < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:john_doe)
       @person.name = 'Jane Doe'
     end
@@ -34,11 +36,12 @@ module PersonTest
   end
   
   
-  class JohnDoeWithChangedSocialSecurityNumber < Test::Unit::TestCase
+  class JohnDoeWithChangedSocialSecurityNumber < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:john_doe)
       @person.social_security_number = '555-55-5555'
     end
@@ -52,11 +55,12 @@ module PersonTest
   end
   
   
-  class JohnDoeWithChangedFirstSpeedTicketAt < Test::Unit::TestCase
+  class JohnDoeWithChangedFirstSpeedTicketAt < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:john_doe)
       @person.first_speeding_ticket_at = 2.months.ago
     end
@@ -70,11 +74,12 @@ module PersonTest
   end
   
   
-  class JohnDoeWithStringifiedFirstSpeedingTicketAt < Test::Unit::TestCase
+  class JohnDoeWithStringifiedFirstSpeedingTicketAt < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = people(:john_doe)
       @person.first_speeding_ticket_at = '1999-09-09'
     end
@@ -86,11 +91,12 @@ module PersonTest
   end
   
   
-  class New < Test::Unit::TestCase
+  class New < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = Person.new
     end
     
@@ -109,11 +115,12 @@ module PersonTest
   end
   
   
-  class NewWithChangedName < Test::Unit::TestCase
+  class NewWithChangedName < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = Person.new(:name => 'John Doe')
       @person.name = 'Jane Doe'
     end
@@ -125,11 +132,12 @@ module PersonTest
   end
   
   
-  class NewSavedWithName < Test::Unit::TestCase
+  class NewSavedWithName < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = Person.new(:name => 'John Doe')
       @person.save!
     end
@@ -146,11 +154,12 @@ module PersonTest
   end
   
   
-  class NewWithChangedSocialSecurityNumber < Test::Unit::TestCase
+  class NewWithChangedSocialSecurityNumber < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = Person.new(:social_security_number => '987-65-4321')
       @person.social_security_number = '555-55-5555'
     end
@@ -162,11 +171,12 @@ module PersonTest
   end
   
   
-  class NewSavedWithSocialSecurityNumber < Test::Unit::TestCase
+  class NewSavedWithSocialSecurityNumber < ActiveSupport::TestCase
     
     fixtures :people
     
     def setup
+      super
       @person = Person.new(:social_security_number => '987-65-4321')
       @person.save!
     end

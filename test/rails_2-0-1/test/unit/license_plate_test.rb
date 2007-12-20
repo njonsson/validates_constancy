@@ -3,11 +3,12 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 module LicensePlateTest
   
-  class MrBigUnprotected < Test::Unit::TestCase
+  class MrBigUnprotected < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
     end
     
@@ -18,11 +19,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtected < Test::Unit::TestCase
+  class MrBigProtected < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       @license_plate.protected = true
     end
@@ -34,11 +36,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigUnprotectedWithChangeToExtra < Test::Unit::TestCase
+  class MrBigUnprotectedWithChangeToExtra < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       @license_plate.extra = 'Extra!'
     end
@@ -50,11 +53,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedWithChangeToExtra < Test::Unit::TestCase
+  class MrBigProtectedWithChangeToExtra < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       @license_plate.protected = true
       @license_plate.extra = 'Extra!'
@@ -67,11 +71,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigUnprotectedWithChangeToState < Test::Unit::TestCase
+  class MrBigUnprotectedWithChangeToState < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       @license_plate.state = 'Misery'
     end
@@ -83,11 +88,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedWithChangeToState < Test::Unit::TestCase
+  class MrBigProtectedWithChangeToState < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       @license_plate.protected = true
       @license_plate.state     = 'Misery'
@@ -102,11 +108,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigUnprotectedWithChangeToNumber < Test::Unit::TestCase
+  class MrBigUnprotectedWithChangeToNumber < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       @license_plate.number = 'I-AINT-FRAID-OF-NO-GHOST'
     end
@@ -118,11 +125,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedWithChangeToNumber < Test::Unit::TestCase
+  class MrBigProtectedWithChangeToNumber < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       @license_plate.protected = true
       @license_plate.number    = 'I-AINT-FRAID-OF-NO-GHOST'
@@ -137,11 +145,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigUnprotectedWithChangesToNumberAndIssuedOn < Test::Unit::TestCase
+  class MrBigUnprotectedWithChangesToNumberAndIssuedOn < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       @license_plate.number    = 'I-AINT-FRAID-OF-NO-GHOST'
       @license_plate.issued_on = 1.year.ago
@@ -154,11 +163,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedWithChangesToNumberAndIssuedOn < Test::Unit::TestCase
+  class MrBigProtectedWithChangesToNumberAndIssuedOn < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       @license_plate.protected = true
       @license_plate.number    = 'I-AINT-FRAID-OF-NO-GHOST'
@@ -175,11 +185,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigUnprotectedWithChangeToColor < Test::Unit::TestCase
+  class MrBigUnprotectedWithChangeToColor < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       Settings.license_plates_protected = false
       @license_plate.color = 'grape'
@@ -192,11 +203,12 @@ module LicensePlateTest
   end
   
   
-  class MrBigProtectedWithChangeToColor < Test::Unit::TestCase
+  class MrBigProtectedWithChangeToColor < ActiveSupport::TestCase
     
     fixtures :license_plates
     
     def setup
+      super
       @license_plate = license_plates(:mr_big)
       Settings.license_plates_protected = true
       @license_plate.color = 'aubergine'
