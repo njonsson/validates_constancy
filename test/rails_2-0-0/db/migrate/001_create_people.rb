@@ -1,12 +1,12 @@
 class CreatePeople < ActiveRecord::Migration
   def self.up
     create_table :people do |t|
-      t.column :type,                     :string
-      t.column :name,                     :string
-      t.column :social_security_number,   :string
-      t.column :birthdate,                :date
-      t.column :became_important_on,      :date
-      t.column :first_speeding_ticket_at, :datetime
+      t.string   :type
+      t.string   :name
+      t.string   :social_security_number
+      t.date     :birthdate
+      t.date     :became_important_on
+      t.datetime :first_speeding_ticket_at
     end
   end
 
