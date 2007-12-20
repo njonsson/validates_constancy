@@ -109,6 +109,9 @@ according to the version of Rails (Active Record) it works with.
 [<b>Rails v1.2.4 (Active Record v1.15.4)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-4
 [<b>Rails v1.2.5 (Active Record v1.15.5)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-5
 [<b>Rails v1.2.6 (Active Record v1.15.6)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-6
+[<b>Rails v2.0.0 (Active Record v2.0.0)</b>]  Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_2-0-0
+[<b>Rails v2.0.1 (Active Record v2.0.1)</b>]  Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_2-0-1
+[<b>Rails v2.0.2 (Active Record v2.0.2)</b>]  Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_2-0-2
 [<b>Edge Rails</b>]                           Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_edge
 
 ==== Plugin
