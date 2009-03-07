@@ -1,0 +1,16 @@
+# == Schema Information
+# Schema version: 2
+#
+# Table name: license_plates
+#
+#  id        :integer(11)   not null, primary key
+#  state     :string(255)   
+#  number    :string(255)   
+#  issued_on :date          
+#  color     :string(255)   
+#  extra     :string(255)   
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+mr_big:
+  number:    MR-BIG
