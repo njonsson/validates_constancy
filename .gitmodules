@@ -52,6 +52,12 @@
 [submodule "test/rails_2-0-3/vendor/plugins/validates_constancy"]
 	path = test/rails_2-0-3/vendor/plugins/validates_constancy
 	url = git://github.com/njonsson/validates-constancy-rails-plugin.git
+[submodule "test/rails_2-0-4/vendor/rails"]
+	path = test/rails_2-0-4/vendor/rails
+	url = git://github.com/rails/rails.git
+[submodule "test/rails_2-0-4/vendor/plugins/validates_constancy"]
+	path = test/rails_2-0-4/vendor/plugins/validates_constancy
+	url = git://github.com/njonsson/validates-constancy-rails-plugin.git
 [submodule "test/rails_edge/vendor/rails"]
 	path = test/rails_edge/vendor/rails
 	url = git://github.com/rails/rails.git
