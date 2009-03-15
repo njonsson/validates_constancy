@@ -2,41 +2,26 @@
 
 http://constancy.rubyforge.org
 
-Compatible with Rails v1.2.2 through v2.0.2 (Active Record v1.15.2 through
-v2.0.2)
+Compatible with Rails v1.2.2 through v2.0.4 (Active Record v1.15.2 through
+v2.0.4)
 
 
 === Introduction
 
-This RubyGem and Rails plugin adds a +validates_constancy_of+ validation to
-Active Record. It allows you to prevent particular database fields from being
-changed after a record is created. A validation error occurs on updates if an
-attribute of a model object is different from its value in the database.
+This Rails plugin adds a +validates_constancy_of+ validation to Active Record.
+It allows you to prevent particular database fields from being changed after a
+record is created. A validation error occurs on updates if an attribute of a
+model object is different from its value in the database.
 
 
 === Installing Validates Constancy
 
-The code is packaged as both a RubyGem and a Rails plugin. You can use either
-one, depending on what your needs are.
+The code is packaged as a Rails plugin. It is compatible with the latest
+released version of the Rails framework (and possibly also other versions -- see
+the 'test' branch of this repository). You can install the plugin with the
+command:
 
-<b>The Validates Constancy gem</b> is compatible with various versions of Rails
-(Active Record) -- see the _test_ subdirectories of
-http://constancy.rubyforge.org/svn/gem/branches. You can install the gem with
-the command:
-
-  gem install validates_constancy
-
-<b>The Validates Constancy plugin</b> is compatible with the latest released
-version of the Rails framework (and possibly also other versions -- see
-http://constancy.rubyforge.org/svn/plugin/test). You can install the plugin with
-the command:
-
-  ruby script/plugin install http://constancy.rubyforge.org/svn/plugin/validates_constancy
-
-Use the gem (http://constancy.rubyforge.org/svn/gem) if you're using Active
-Record apart from Rails, or for compatibility with a version of Rails (Active
-Record) that is not supported by the plugin. Use the plugin if your Rails
-version is up to date and if you like the convenience of a Rails plugin.
+  ruby script/plugin install git://github.com/njonsson/validates-constancy-rails-plugin.git
 
 
 === Using constancy validation
@@ -102,35 +87,14 @@ There's a suite of tests that exercises all the functionality of Validates
 Constancy. You can check out a version of the test suite from the repository
 according to the version of Rails (Active Record) it works with.
 
-==== Gem
-
-[<b>Rails v1.2.2 (Active Record v1.15.2)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-2
-[<b>Rails v1.2.3 (Active Record v1.15.3)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-3
-[<b>Rails v1.2.4 (Active Record v1.15.4)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-4
-[<b>Rails v1.2.5 (Active Record v1.15.5)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-5
-[<b>Rails v1.2.6 (Active Record v1.15.6)</b>] Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_1-2-6
-[<b>Rails v2.0.0 (Active Record v2.0.0)</b>]  Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_2-0-0
-[<b>Rails v2.0.1 (Active Record v2.0.1)</b>]  Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_2-0-1
-[<b>Rails v2.0.2 (Active Record v2.0.2)</b>]  Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_2-0-2
-[<b>Edge Rails</b>]                           Check out http://constancy.rubyforge.org/svn/gem/branches/branch_1-x/test/rails_edge
-
-==== Plugin
-
-[<b>Rails v1.2.2 (Active Record v1.15.2)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-2
-[<b>Rails v1.2.3 (Active Record v1.15.3)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-3
-[<b>Rails v1.2.4 (Active Record v1.15.4)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-4
-[<b>Rails v1.2.5 (Active Record v1.15.5)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-5
-[<b>Rails v1.2.6 (Active Record v1.15.6)</b>] Check out http://constancy.rubyforge.org/svn/plugin/test/rails_1-2-6
-[<b>Rails v2.0.0 (Active Record v2.0.0)</b>]  Check out http://constancy.rubyforge.org/svn/plugin/test/rails_2-0-0
-[<b>Rails v2.0.1 (Active Record v2.0.1)</b>]  Check out http://constancy.rubyforge.org/svn/plugin/test/rails_2-0-1
-[<b>Rails v2.0.2 (Active Record v2.0.2)</b>]  Check out http://constancy.rubyforge.org/svn/plugin/test/rails_2-0-2
-[<b>Edge Rails</b>]                           Check out http://constancy.rubyforge.org/svn/plugin/test/rails_edge
+  git checkout test
+  git submodule update --init
 
 Then read rails_*/doc/README_FOR_APP for instructions on how to run the tests.
 
 
 === Credits
 
-Copyright © 2007-2008 Nils Jonsson (mailto:nils@alumni.rice.edu)
+Copyright © 2007-2009 Nils Jonsson (mailto:nils@alumni.rice.edu)
 
 Released under the MIT license.
