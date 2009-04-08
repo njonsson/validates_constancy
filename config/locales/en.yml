@@ -1,0 +1,5 @@
+en:
+  activerecord:
+    errors:
+      messages:
+        constancy: "can't be changed"

@@ -7,8 +7,6 @@ require 'active_record'
 # models.
 module ConstancyValidation
   
-  ActiveRecord::Errors.default_error_messages[:constancy] = "can't be changed"
-  
   # The following validation is defined in the class scope of the model that
   # you're interested in validating. It offers a declarative way of specifying
   # when the model is valid and when it is not.
@@ -44,7 +42,8 @@ module ConstancyValidation
     # so you'll want to specify associations *after* +validates_constancy_of+
     # statements in your model classes.
     def validates_constancy_of(*attribute_names)
-      options = {:message =>
+      options = {:message => Object.const_defined?(:I18n) ?
+                 I18n.translate('activerecord.errors.messages.constancy') :
                  ActiveRecord::Errors.default_error_messages[:constancy]}
       options.merge!(attribute_names.pop) if attribute_names.last.kind_of?(Hash)
       
