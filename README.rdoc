@@ -95,6 +95,6 @@ Then read rails_*/doc/README_FOR_APP for instructions on how to run the tests.
 
 === Credits
 
-Copyright © 2007-2009 Nils Jonsson (mailto:nils@alumni.rice.edu)
+Copyright (c) 2007-2009 Nils Jonsson (mailto:nils@alumni.rice.edu)
 
 Released under the MIT license.
