@@ -13,16 +13,17 @@ spec = Gem::Specification.new do |s|
                   'attribute of a model object is different from its value ' +
                   'in the database.'
   
-  s.files = %w( CHANGELOG Rakefile MIT-LICENSE README init.rb
+  s.files = %w( CHANGELOG MIT-LICENSE README.rdoc Rakefile init.rb
+                config/locales/en.yml
                 lib/validates_constancy.rb
                 lib/validates_constancy/constancy_validation.rb
-                test/README)
+                test/README.rdoc)
   
   s.add_dependency 'activerecord'
   s.autorequire       = 'validates_constancy'
   s.has_rdoc          = true
-  s.extra_rdoc_files  = %w(MIT-LICENSE README)
+  s.extra_rdoc_files  = %w(MIT-LICENSE README.rdoc)
   s.rubyforge_project = 'constancy'
   s.rdoc_options << '--title' << 'Validates Constancy for Active Record' <<
-                    '--main' << 'README'
+                    '--main' << 'README.rdoc'
 end
