@@ -15,6 +15,7 @@ spec = Gem::Specification.new do |s|
   
   s.files = %w( CHANGELOG MIT-LICENSE README.rdoc Rakefile init.rb
                 config/locales/en.yml
+                config/locales/ru.yml
                 lib/validates_constancy.rb
                 lib/validates_constancy/constancy_validation.rb
                 test/README.rdoc)

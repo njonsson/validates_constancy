@@ -1,0 +1,5 @@
+ru:
+  activerecord:
+    errors:
+      messages:
+        constancy: "не может быть изменён"
