@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name        = 'validates-constancy-rails-plugin'
-  s.version     = '1.0.20090327'
+  s.version     = '1.0.20090923'
   s.author      = 'Nils Jonsson'
   s.email       = 'nils@alumni.rice.edu'
   s.homepage    = 'http://constancy.rubyforge.org/'
